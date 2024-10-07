@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BaoHiemNhanTho
+namespace Quanlyvatlieuxaydung
 {
     static class Program
     {
@@ -16,7 +16,10 @@ namespace BaoHiemNhanTho
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmKhachHang());
+            //Application.Run(new frm_DangNhap());
+            Application.Run(new frmTrangchu_AD());
+            //Application.Run(new frmKho());
+           
         }
     }
 }

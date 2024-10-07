@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C5EA21F0-849B-452B-9EAF-619CF51338D7}</ProjectGuid>
+    <ProjectGuid>{A30E28E6-A926-456B-94F0-FED87FCF51DF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BaoHiemNhanTho</RootNamespace>
-    <AssemblyName>BaoHiemNhanTho</AssemblyName>
+    <RootNamespace>Quanlyvatlieuxaydung</RootNamespace>
+    <AssemblyName>Quanlyvatlieuxaydung</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,17 +32,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MongoDB.Bson, Version=2.3.0.157, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MongoDB.Bson.2.3.0\lib\net45\MongoDB.Bson.dll</HintPath>
-    </Reference>
-    <Reference Include="MongoDB.Driver, Version=2.3.0.157, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MongoDB.Driver.2.3.0\lib\net45\MongoDB.Driver.dll</HintPath>
-    </Reference>
-    <Reference Include="MongoDB.Driver.Core, Version=2.3.0.157, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MongoDB.Driver.Core.2.3.0\lib\net45\MongoDB.Driver.Core.dll</HintPath>
-    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,50 +50,115 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Customer.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="frmBaoCaoNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmBaoCaoNhap.Designer.cs">
+      <DependentUpon>frmBaoCaoNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmKhachHang.cs">
+    <Compile Include="frmChiTietHoaDonNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmKhachHang.Designer.cs">
-      <DependentUpon>frmKhachHang.cs</DependentUpon>
+    <Compile Include="frmChiTietHoaDonNhap.Designer.cs">
+      <DependentUpon>frmChiTietHoaDonNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmThongTinNguoiThan.cs">
+    <Compile Include="frmChiTietHoaDonXuat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmThongTinNguoiThan.Designer.cs">
-      <DependentUpon>frmThongTinNguoiThan.cs</DependentUpon>
+    <Compile Include="frmChiTietHoaDonXuat.Designer.cs">
+      <DependentUpon>frmChiTietHoaDonXuat.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTrangChu.cs">
+    <Compile Include="frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTrangChu.Designer.cs">
-      <DependentUpon>frmTrangChu.cs</DependentUpon>
+    <Compile Include="frmDangNhap.Designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDoiMatKhau.Designer.cs">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHoaDonXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHoaDonXuat.Designer.cs">
+      <DependentUpon>frmHoaDonXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMyTeam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMyTeam.Designer.cs">
+      <DependentUpon>frmMyTeam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThongTinKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongTinKhachHang.Designer.cs">
+      <DependentUpon>frmThongTinKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThongTinNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongTinNhanVien.Designer.cs">
+      <DependentUpon>frmThongTinNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThongTinTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongTinTaiKhoan.Designer.cs">
+      <DependentUpon>frmThongTinTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTrangchu_AD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrangchu_AD.Designer.cs">
+      <DependentUpon>frmTrangchu_AD.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmKhachHang.resx">
-      <DependentUpon>frmKhachHang.cs</DependentUpon>
+    <EmbeddedResource Include="frmBaoCaoNhap.resx">
+      <DependentUpon>frmBaoCaoNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChiTietHoaDonNhap.resx">
+      <DependentUpon>frmChiTietHoaDonNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChiTietHoaDonXuat.resx">
+      <DependentUpon>frmChiTietHoaDonXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDoiMatKhau.resx">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHoaDonXuat.resx">
+      <DependentUpon>frmHoaDonXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMyTeam.resx">
+      <DependentUpon>frmMyTeam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThongTinKhachHang.resx">
+      <DependentUpon>frmThongTinKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThongTinNhanVien.resx">
+      <DependentUpon>frmThongTinNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThongTinTaiKhoan.resx">
+      <DependentUpon>frmThongTinTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -105,6 +167,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Icon\baocaokho.png" />
+    <Content Include="Resources\Icon\company.png" />
+    <Content Include="Resources\Icon\customers.png" />
+    <Content Include="Resources\Icon\export.png" />
+    <Content Include="Resources\Icon\hanghoa.png" />
+    <Content Include="Resources\Icon\notes %281%29.png" />
+    <Content Include="Resources\Icon\notes.png" />
+    <None Include="Resources\Img\biatrangchu.jpg" />
+    <None Include="Resources\Icon\printer.png" />
+    <Content Include="Resources\Icon\sticky-note.png" />
+    <None Include="Resources\Icon\team.png" />
+    <None Include="Resources\Icon\user.png" />
+    <None Include="Resources\Icon\home-button.png" />
+    <Content Include="Resources\Icon\import.png" />
+    <Content Include="Resources\Icon\key-chain.png" />
+    <Content Include="Resources\Icon\fix.png" />
+    <Content Include="Resources\Icon\add.png" />
+    <Content Include="Resources\Icon\kho.png" />
+    <Content Include="Resources\Icon\loaihang.png" />
+    <None Include="Resources\Icon\logout.png" />
+    <Content Include="Resources\Icon\power-on.png" />
+    <Content Include="Resources\Icon\refresh.png" />
+    <Content Include="Resources\Icon\remove.png" />
+    <None Include="Resources\Icon\reset-password.png" />
+    <Content Include="Resources\Icon\save.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
